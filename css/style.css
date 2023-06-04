@@ -1,0 +1,59 @@
+/* Color Theme Swatches in Hex */
+
+body{
+ --aviso: #FFAE00;
+ --quadrado: #634A00;
+ --quadrado-desativado: #634a007c;
+ --fundo: #383416;
+ --certo: #0C7D74;
+ --borda: #0F353D;
+ background-color: var(--fundo);
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#tela{
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grade{
+    display: flex;
+    height: 450px;
+    width: 390px;
+    flex-direction: column;
+    gap: 5px;
+}
+.linha{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+input{
+    all: unset;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    caret-color: transparent;
+}
+.quadrado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    width: 70px;
+    border-radius: 20px;
+    background-color: var(--quadrado-desativado);
+    height: 70px;
+    text-align: center;
+   
+}
+.quadrado.ativado{
+    background-color:var(--quadrado)
+}
+.escolhido{
+    border-bottom: 10px solid black;
+}
