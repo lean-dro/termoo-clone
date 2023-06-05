@@ -32,7 +32,6 @@ body{
 }
 input{
     all: unset;
-    cursor: pointer;
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -44,6 +43,8 @@ input{
     align-items: center;
     justify-content: center;
     border: 3px solid black;
+    color: white;
+    font-weight: bold;
     width: 70px;
     border-radius: 20px;
     background-color: var(--quadrado-desativado);
@@ -52,8 +53,17 @@ input{
    
 }
 .quadrado.ativado{
-    background-color:var(--quadrado)
+    background-color:var(--quadrado);
+    cursor: pointer;
 }
 .escolhido{
     border-bottom: 10px solid black;
 }
+.certo{
+    background-color: var(--certo);
+}
+.aviso{
+    background-color: var(--aviso);
+}
+
+/* */
