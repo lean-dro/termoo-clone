@@ -6,7 +6,13 @@ var palavra = [
   ["", "", "", "", ""],
   ["", "", "", "", ""],
 ];
-var gabarito = ["A", "R", "E", "I", "O"];
+
+var palavra = "AREIO"
+var gabarito = palavra.split("")
+var gabaritoAuxiliar = palavra.split("")
+gabaritoAuxiliar = gabarito
+
+
 var linhaAtual = 1;
 var ultimoQuadradoEscolhido;
 var primeiraEscolha = true;
@@ -91,27 +97,19 @@ function resultadoLinha() {
     var letra = input.value
     validarColuna(coluna, letra, input)
 }
+
 }
 
 function validarColuna(coluna, letra, input) {
-    var primeiroIndice = gabarito.indexOf(letra)
-    var indice = primeiroIndice
-
-   
-    for (var colunaGabarito = 0; colunaGabarito < gabarito.length; colunaGabarito++) {
-      
-      indice = colunaGabarito
-    }
-    console.log(letra+":")
-    console.log(indices)
-    if(primeiroIndice > -1){
-      if(primeiroIndice == coluna){
+    var indice = gabaritoAuxiliar.indexOf(letra)
+    if(indice > -1){
+      if(indice == coluna){
         input.classList.add("certo")
       }else{
         input.classList.add("aviso")
       }
+      gabaritoAuxiliar[indice] = null
     }
-
 }
 
 function validarLinha() {
@@ -130,6 +128,7 @@ function validarLinha() {
       linhaAtual++;
       ativarLinhas(linhaAtual);
       direcaoPulo(0, "avançar");
+   
       return true;
     }
   } else {
@@ -148,6 +147,7 @@ var tela = document.getElementById("tela");
 tela.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     validarLinha();
-    console.log("test");
+    gabarito = palavra.split("")
+    gabaritoAuxiliar = palavra.split("")
   }
 });

@@ -37,6 +37,7 @@ input{
     height: 100%;
     font-size: 40px;
     caret-color: transparent;
+    text-transform: uppercase;
 }
 .quadrado{
     display: flex;
